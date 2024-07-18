@@ -1,0 +1,17 @@
+services:
+  netbootxyz:
+    image: lscr.io/linuxserver/netbootxyz:latest
+    container_name: netbootxyz
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - ${DATA}/netbootxyz:/config
+      - ${DATA}/netbootxyz/assets:/assets
+    ports:
+      - ${PORT1}:4000
+      - ${PORT2}:69/udp
+      - ${PORT3}:80
+    network_mode: bridge
+    restart: unless-stopped

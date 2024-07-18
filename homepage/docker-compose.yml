@@ -1,0 +1,11 @@
+services:
+  homepage:
+    container_name: homepage
+    image: ghcr.io/gethomepage/homepage:latest
+    ports:
+      - ${PORT}:3000
+    volumes:
+      - ${DATA}/homepage:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
+    network_mode: bridge
+    restart: unless-stopped

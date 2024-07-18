@@ -1,0 +1,12 @@
+services:
+  kiwix-serve:
+    image: ghcr.io/kiwix/kiwix-serve
+    container_name: kiwix-serve 
+    volumes:
+      - ${DATA}/kiwix:/data
+    ports:
+      - ${PORT}:8080
+    command:
+      '*.zim'
+    network_mode: bridge
+    restart: unless-stopped

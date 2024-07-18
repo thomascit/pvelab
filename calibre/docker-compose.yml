@@ -1,0 +1,15 @@
+services:
+  calibre:
+    image: lscr.io/linuxserver/calibre:latest
+    container_name: calibre
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - ${DATA}/calibre:/config
+    ports:
+      - ${PORT1}:8080 #Desktop GUI
+      - ${PORT2}:8181 #HTTPS
+      - ${PORT3}:8081 #Webserver GUI
+    restart: unless-stopped
