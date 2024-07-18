@@ -10,7 +10,7 @@ services:
       - ${DATA}/netbootxyz:/config
       - ${DATA}/netbootxyz/assets:/assets
     ports:
-      - ${PORT1}:4000
+      - ${PORT1}:3000
       - ${PORT2}:69/udp
       - ${PORT3}:80
     network_mode: bridge
