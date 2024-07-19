@@ -3,7 +3,7 @@ services:
     image: ghcr.io/kiwix/kiwix-serve
     container_name: kiwix-serve 
     volumes:
-      - ${DATA}/kiwix:/data
+      - ${APPDATA}/kiwix:/data
     ports:
       - ${PORT}:8080
     command:

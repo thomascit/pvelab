@@ -7,7 +7,7 @@ services:
       - 81:81
       - 443:443
     volumes:
-      - ${DATA}/nginx-proxy-manager/data:/data
-      - ${DATA}/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+      - ${APPDATA}/nginx-proxy-manager/data:/data
+      - ${APPDATA}/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
     network_mode: bridge
     restart: unless-stopped

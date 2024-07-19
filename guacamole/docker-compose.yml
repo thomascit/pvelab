@@ -3,7 +3,7 @@ services:
     image: jwetzell/guacamole
     container_name: guacamole
     volumes:
-      - ${DATA}/guacamole:/config
+      - ${APPDATA}/guacamole:/config
     ports:
       - ${PORT}:8080
     network_mode: bridge

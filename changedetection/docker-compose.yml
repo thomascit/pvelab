@@ -4,7 +4,7 @@ services:
       container_name: changedetection
       hostname: changedetection
       volumes:
-        - ${DATA}/changedetection:/datastore
+        - ${APPDATA}/changedetection:/datastore
       ports:
         - ${PORT}:5000
       network_mode: bridge

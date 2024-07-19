@@ -7,7 +7,7 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - ${DATA}/calibre:/config
+      - ${APPDATA}/calibre:/config
     ports:
       - ${PORT1}:8080 #Desktop GUI
       - ${PORT2}:8181 #HTTPS

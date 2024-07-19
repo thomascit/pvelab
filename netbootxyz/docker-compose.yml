@@ -7,8 +7,8 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - ${DATA}/netbootxyz:/config
-      - ${DATA}/netbootxyz/assets:/assets
+      - ${APPDATA}/netbootxyz:/config
+      - ${APPDATA}/netbootxyz/assets:/assets
     ports:
       - ${PORT1}:3000
       - ${PORT2}:69/udp

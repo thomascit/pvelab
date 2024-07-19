@@ -7,8 +7,8 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - ${DATA}/smokeping/config:/config
-      - ${DATA}/smokeping/data:/data
+      - ${APPDATA}/smokeping/config:/config
+      - ${APPDATA}/smokeping/data:/data
     ports:
       - ${PORT}:80
     network_mode: bridge

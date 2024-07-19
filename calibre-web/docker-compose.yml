@@ -8,8 +8,8 @@ services:
       - TZ=${TZ}
       - DOCKER_MODS=linuxserver/mods:universal-calibre
     volumes:
-      - ${DATA}/calibre-web:/config
-      - ${DATA}/calibre:/books
+      - ${APPDATA}/calibre-web:/config
+      - ${APPDATA}/calibre:/books
     ports:
       - ${PORT}:8083
     restart: unless-stopped
