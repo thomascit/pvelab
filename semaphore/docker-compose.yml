@@ -1,0 +1,11 @@
+services:
+  semaphore:
+    ports:
+      - ${PORT}:3000
+    image: semaphoreui/semaphore:latest
+    environment:
+      SEMAPHORE_DB_DIALECT: bolt
+      SEMAPHORE_ADMIN_PASSWORD: ${PASSWORD}
+      SEMAPHORE_ADMIN_NAME: ${ADMIN}
+      SEMAPHORE_ADMIN_EMAIL: ${EMAIL}
+      SEMAPHORE_ADMIN: ${ADMIN}
